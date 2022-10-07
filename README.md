@@ -1,8 +1,12 @@
-# Coin-Identidication
+# Coin-Identification
 
 The goal of the Coin Identification Project is to implement a system that can estimate the number of various coins in the image
 
-Steps: 
+Sample: Input Image:
+![1](https://user-images.githubusercontent.com/48822463/194524905-21f24111-21b8-46e2-bdce-0b486fa4beeb.JPG)
+
+## Steps:
+
 
 1. Calibration
 2. Preprocessing
@@ -12,7 +16,13 @@ Steps:
 6. Other approaches (k-means clustering)
 7. Other approaches (normxcorr, Fourier transform)
 
-The main function is:  estim_coins which is called as
+**The detailed approach, steps and results can be found in Coin-Identification Solution and Approach.pdf**
+
+## Run the project
+You can run the program **test.m**
+test.m runs for all the 12 input images named : 1.jpg, 2.jpg, etc.
+
+In test.m  the main function is:  estim_coins which is called as
 
 [coins] = estim_coins(measurement, bias, dark, flat);
 
@@ -25,4 +35,4 @@ where Fˆ needs to be scaled such that the Fˆ =1. In may cases Fˆ consists of 
 Inside the function estim_coins you should define two calibrations, first the calibration of the intensity and then also the geometric calibration for the input image. Typically the output from the geometric calibration is a two-element vector containing the 2D-mapping from millimeters to pixels (the first element is corresponding.
 
 
-The Model Perdformace was on average 84%.
+**The Model Perdformace was on average 84%**
